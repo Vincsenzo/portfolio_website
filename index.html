@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szabó Vince - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            margin-bottom: 30px;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.25rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        h1 a {
+            text-decoration: none;
+            color: #333;
+        }
+        .gallery {
+            column-count: 2;
+            column-gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            break-inside: avoid;
+        }
+        @media (max-width: 767px) {
+            .gallery {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Szabó Vince</a></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <section class="gallery">
+            <img src="https://i.imgur.com/uu3R2jQ.jpeg" alt="">
+            <img src="https://i.imgur.com/hi8vUsF.jpeg" alt="">
+            <img src="https://i.imgur.com/QviVV8h.jpeg" alt="">
+            <img src="https://i.imgur.com/ekHRuRu.jpeg" alt="">
+            <img src="https://i.imgur.com/LfUD5GT.jpeg" alt="">
+            <img src="https://i.imgur.com/uZ12gt7.jpeg" alt="">
+            <img src="https://i.imgur.com/AaEQtuL.jpeg" alt="">
+                        
+            <img src="https://i.imgur.com/fH35e18.jpeg" alt="">
+            <img src="https://i.imgur.com/CEMHbrv.jpeg" alt="">
+            <img src="https://i.imgur.com/KEowzx7.jpeg" alt="">
+            <img src="https://i.imgur.com/t7AfAYa.jpeg" alt="">
+            <img src="https://i.imgur.com/zryH7ns.jpeg" alt="">
+            <img src="https://i.imgur.com/t94j7zP.jpeg" alt="">
+            <img src="https://i.imgur.com/ltT4FJN.jpeg" alt="">
+        </section>
+    </div>
+</body>
+</html>
