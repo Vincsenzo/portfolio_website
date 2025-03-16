@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leila Boveiri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><a href="index.html">Leila Boveiri</a></h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <section class="full-image">
+            <a id="backButton" href="" class="next-button">←</a>
+            <img id="imgTag" src="#" alt="">
+            <a id="nextButton" href="" class="next-button">→ </a>
+        </section>
+    </div>
+    <script>
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+
+        let imgNum = parseInt(params.i, 10);
+        let imgUrl = `https://leilaboveiri.vercel.app/${imgNum}.jpg`;
+        document.getElementById('imgTag').src = imgUrl;
+
+        if (imgNum > 1 && imgNum < 32) {
+            let prevNum = imgNum - 1;
+            let prevUrl = `IMG_full.html?i=${prevNum}`;
+            document.getElementById('backButton').href = prevUrl;
+
+            let nextNum = imgNum + 1;
+            let nextUrl = `IMG_full.html?i=${nextNum}`;
+            document.getElementById('nextButton').href = nextUrl;
+        } else if (imgNum == 1) {
+            let prevUrl = `IMG_full.html?i=1`;
+            document.getElementById('backButton').href = prevUrl;
+
+            let nextUrl = `IMG_full.html?i=2`;
+            document.getElementById('nextButton').href = nextUrl;
+        } else if (imgNum == 32) {
+            let prevUrl = `IMG_full.html?i=31`;
+            document.getElementById('backButton').href = prevUrl;
+
+            let nextUrl = `IMG_full.html?i=32`;
+            document.getElementById('nextButton').href = nextUrl;
+        } else {
+            
+        }
+    </script>
+</body>
+</html>
