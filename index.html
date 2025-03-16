@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leila Boveiri - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div class="container">
@@ -16,40 +17,76 @@
                 <a href="contact.html">Contact</a>
             </nav>
         </header>
+
+        <div class="popup" id="imagePopup">
+            <p></p>
+            <button class="close-btn" onclick="closePopup()">&times;</button>
+            <img src="#" id="fullImage">
+            <p>This is some bosomy art</p>
+        </div>
+
         <section class="gallery">
-            <a href="IMG_full.html?i=1"><img src="/thumbnails/1.jpg" alt=""></a>
-            <a href="IMG_full.html?i=2"><img src="/thumbnails/2.jpg" alt=""></a>
-            <a href="IMG_full.html?i=3"><img src="/thumbnails/3.jpg" alt=""></a>
-            <a href="IMG_full.html?i=4"><img src="/thumbnails/4.jpg" alt=""></a>
-            <a href="IMG_full.html?i=5"><img src="/thumbnails/5.jpg" alt=""></a>
-            <a href="IMG_full.html?i=6"><img src="/thumbnails/6.jpg" alt=""></a>
-            <a href="IMG_full.html?i=7"><img src="/thumbnails/7.jpg" alt=""></a>
-            <a href="IMG_full.html?i=8"><img src="/thumbnails/8.jpg" alt=""></a>
-            <a href="IMG_full.html?i=9"><img src="/thumbnails/9.jpg" alt=""></a>
-            <a href="IMG_full.html?i=10"><img src="/thumbnails/10.jpg" alt=""></a>
-            <a href="IMG_full.html?i=11"><img src="/thumbnails/11.jpg" alt=""></a>
-            <a href="IMG_full.html?i=12"><img src="/thumbnails/12.jpg" alt=""></a>
-            <a href="IMG_full.html?i=13"><img src="/thumbnails/13.jpg" alt=""></a>
-            <a href="IMG_full.html?i=14"><img src="/thumbnails/14.jpg" alt=""></a>
-            <a href="IMG_full.html?i=15"><img src="/thumbnails/15.jpg" alt=""></a>
-            <a href="IMG_full.html?i=16"><img src="/thumbnails/16.jpg" alt=""></a>
-            <a href="IMG_full.html?i=17"><img src="/thumbnails/17.jpg" alt=""></a>
-            <a href="IMG_full.html?i=18"><img src="/thumbnails/18.jpg" alt=""></a>
-            <a href="IMG_full.html?i=19"><img src="/thumbnails/19.jpg" alt=""></a>
-            <a href="IMG_full.html?i=20"><img src="/thumbnails/20.jpg" alt=""></a>
-            <a href="IMG_full.html?i=21"><img src="/thumbnails/21.jpg" alt=""></a>
-            <a href="IMG_full.html?i=22"><img src="/thumbnails/22.jpg" alt=""></a>
-            <a href="IMG_full.html?i=23"><img src="/thumbnails/23.jpg" alt=""></a>
-            <a href="IMG_full.html?i=24"><img src="/thumbnails/24.jpg" alt=""></a>
-            <a href="IMG_full.html?i=25"><img src="/thumbnails/25.jpg" alt=""></a>
-            <a href="IMG_full.html?i=26"><img src="/thumbnails/26.jpg" alt=""></a>
-            <a href="IMG_full.html?i=27"><img src="/thumbnails/27.jpg" alt=""></a>
-            <a href="IMG_full.html?i=28"><img src="/thumbnails/28.jpg" alt=""></a>
-            <a href="IMG_full.html?i=29"><img src="/thumbnails/29.jpg" alt=""></a>
-            <a href="IMG_full.html?i=30"><img src="/thumbnails/30.jpg" alt=""></a>
-            <a href="IMG_full.html?i=31"><img src="/thumbnails/31.jpg" alt=""></a>
-            <a href="IMG_full.html?i=32"><img src="/thumbnails/32.jpg" alt=""></a>
+            <img src="/thumbnails/1.jpg" class="hover thumbnail" onclick="openPopup(1)">
+            <img src="/thumbnails/2.jpg" class="hover thumbnail" onclick="openPopup(2)">
+            <img src="/thumbnails/3.jpg" class="hover thumbnail" onclick="openPopup(3)">
+            <img src="/thumbnails/4.jpg" class="hover thumbnail" onclick="openPopup(4)">
+            <img src="/thumbnails/5.jpg" class="hover thumbnail" onclick="openPopup(5)">
+            <img src="/thumbnails/6.jpg" class="hover thumbnail" onclick="openPopup(6)">
+            <img src="/thumbnails/7.jpg" class="hover thumbnail" onclick="openPopup(7)">
+            <img src="/thumbnails/8.jpg" class="hover thumbnail" onclick="openPopup(8)">
+            <img src="/thumbnails/9.jpg" class="hover thumbnail" onclick="openPopup(9)">
+            <img src="/thumbnails/10.jpg" class="hover thumbnail" onclick="openPopup(10)">
+            <img src="/thumbnails/11.jpg" class="hover thumbnail" onclick="openPopup(11)">
+            <img src="/thumbnails/12.jpg" class="hover thumbnail" onclick="openPopup(12)">
+            <img src="/thumbnails/13.jpg" class="hover thumbnail" onclick="openPopup(13)">
+            <img src="/thumbnails/14.jpg" class="hover thumbnail" onclick="openPopup(14)">
+            <img src="/thumbnails/15.jpg" class="hover thumbnail" onclick="openPopup(15)">
+            <img src="/thumbnails/16.jpg" class="hover thumbnail" onclick="openPopup(16)">
+            <img src="/thumbnails/17.jpg" class="hover thumbnail" onclick="openPopup(17)">
+            <img src="/thumbnails/18.jpg" class="hover thumbnail" onclick="openPopup(18)">
+            <img src="/thumbnails/19.jpg" class="hover thumbnail" onclick="openPopup(19)">
+            <img src="/thumbnails/20.jpg" class="hover thumbnail" onclick="openPopup(20)">
+            <img src="/thumbnails/21.jpg" class="hover thumbnail" onclick="openPopup(21)">
+            <img src="/thumbnails/22.jpg" class="hover thumbnail" onclick="openPopup(22)">
+            <img src="/thumbnails/23.jpg" class="hover thumbnail" onclick="openPopup(23)">
+            <img src="/thumbnails/24.jpg" class="hover thumbnail" onclick="openPopup(24)">
+            <img src="/thumbnails/25.jpg" class="hover thumbnail" onclick="openPopup(25)">
+            <img src="/thumbnails/26.jpg" class="hover thumbnail" onclick="openPopup(26)">
+            <img src="/thumbnails/27.jpg" class="hover thumbnail" onclick="openPopup(27)">
+            <img src="/thumbnails/28.jpg" class="hover thumbnail" onclick="openPopup(28)">
+            <img src="/thumbnails/29.jpg" class="hover thumbnail" onclick="openPopup(29)">
+            <img src="/thumbnails/30.jpg" class="hover thumbnail" onclick="openPopup(30)">
+            <img src="/thumbnails/31.jpg" class="hover thumbnail" onclick="openPopup(31)">
+            <img src="/thumbnails/32.jpg" class="hover thumbnail" onclick="openPopup(32)">
+
+            <!-- Old method (still works): -->
+            <!-- <a href="IMG_full.html?i=32"><img src="/thumbnails/32.jpg" alt=""></a> -->
         </section>
     </div>
+
+    <script>
+        function openPopup(num) {
+            let imgNum = parseInt(num, 10);
+            let imgUrl = `https://leilaboveiri.vercel.app/${imgNum}.jpg`;
+            const fullImage = document.getElementById('fullImage');
+
+            fullImage.onload = function () {
+                document.getElementById('imagePopup').style.display = 'flex';
+            };
+
+            imagePopup.addEventListener('click', function (e) {
+                if (e.target === imagePopup) {
+                    closePopup();
+                }
+            });
+
+            fullImage.src = imgUrl;
+            document.querySelectorAll('.thumbnail').forEach(el => el.classList.remove('hover'));
+        }
+        function closePopup() {
+            document.getElementById('imagePopup').style.display = 'none';
+            document.querySelectorAll('.thumbnail').forEach(el => el.classList.add('hover'));
+        }
+    </script>
 </body>
 </html>
