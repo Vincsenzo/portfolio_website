@@ -34,13 +34,15 @@ h1 a {
 }
 /* Index style */
 .gallery {
-    column-count: 2;
-    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;   /* Allows items to wrap into new rows */
+    gap: 15px;         /* Consistent spacing */
 }
+
 .gallery img {
-    width: 100%;
-    margin-bottom: 15px;
-    break-inside: avoid;
+    flex: 1 1 200px;   /* Flexible size with a minimum width */
+    height: 350px;     /* Fixed height for uniform row height */
+    object-fit: cover; /* Ensures images fill their space without distortion */
 }
 .hover:hover {
     transition: all 0.2s ease-in-out;
@@ -49,7 +51,14 @@ h1 a {
 }
 @media (max-width: 767px) {
     .gallery {
+        display: block;
         column-count: 1;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+        break-inside: avoid;
     }
 }
 /* Contact style */
