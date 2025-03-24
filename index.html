@@ -22,7 +22,7 @@
             <p></p>
             <button class="close-btn" onclick="closePopup()">&times;</button>
             <img src="#" id="fullImage">
-            <p>This is some bosomy art</p>
+            <p id="description">This is some bosomy art</p>
         </div>
 
         <section class="gallery">
@@ -65,11 +65,47 @@
     </div>
 
     <script>
+        var descriptionDict = {
+            1: "Text 1",
+            2: "Text 2",
+            3: "Text 3",
+            4: "Text 4",
+            5: "Text 5",
+            6: "Text 6",
+            7: "Text 7",
+            8: "Text 8",
+            9: "Text 9",
+            10: "Text 10",
+            11: "Text 11",
+            12: "Text 12",
+            13: "Text 13",
+            14: "Text 14",
+            15: "Text 15",
+            16: "Text 16",
+            17: "Text 17",
+            18: "Text 18",
+            19: "Text 19",
+            20: "Text 20",
+            21: "Text 21",
+            22: "Text 22",
+            23: "Text 23",
+            24: "Text 24",
+            25: "Text 25",
+            26: "Text 26",
+            27: "Text 27",
+            28: "Text 28",
+            29: "Text 29",
+            30: "Text 30",
+            31: "Text 31",
+            32: "Text 32",
+        };
         function openPopup(num) {
             let imgNum = parseInt(num, 10);
             let imgUrl = `https://leilaboveiri.vercel.app/${imgNum}.jpg`;
             const fullImage = document.getElementById('fullImage');
+            const description = document.getElementById('description');
 
+            description.innerText = descriptionDict[String(imgNum)];
             fullImage.onload = function () {
                 document.getElementById('imagePopup').style.display = 'flex';
             };
